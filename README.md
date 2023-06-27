@@ -1,4 +1,4 @@
-# japan-travel-landing by haide 
+# Japan travel landing by haide 
 - HTML 5
 - CSS 3
 - JavaScrypt
