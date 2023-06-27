@@ -1,0 +1,887 @@
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	color: #102746;
+	font-size: 16px;
+	font-family: Lato;
+}
+
+*,*::before, *::after {
+	box-sizing: inherit;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.section-title {
+	color: #102746;
+	font-size: 35px;
+	font-family: Lato;
+	font-weight: 500;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.section-title::after {
+	display: block;
+	width: 250px;
+	height: 2px;
+	content: '';
+	background: #006DFE;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.wrapper {
+	max-width: 1060px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.wrapper-large {
+	max-width: 1262px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+
+/* Header styles start */
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-bottom: 30px;
+	transition: 0.25s linear;
+	z-index: 10	;
+}
+
+.header_active {
+	background: #0E1D28;
+}
+
+.header__wrapper {
+	padding-top: 56px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+	transition: 0.15s linear;
+}
+
+.header__wrapper_active {
+	padding-top: 30px;
+}
+
+.header__nav__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header__nav__item {
+	margin-left: 82px;
+}
+
+.header__nav__link {
+	color: #FFF;
+	font-size: 18px;
+	font-family: Lato;
+	line-height: 24px;
+	text-decoration: none;
+}
+
+.header__nav__link:hover, .header__nav__link:focus, .header__nav__link:active {
+	opacity: 0.7;
+	border:0;
+	outline: none;
+}
+
+.header__burger {
+	display: none;
+	height: 28px;
+	width: 40px;
+	position: relative;
+}
+
+.burger-line {
+	position: absolute;
+	left: 0;
+	display: block;
+	height: 2px;
+	width: 100%;
+	background: #fff;
+}
+
+.burger-line__first {
+	top: 0;
+}
+
+.burger-line__second {
+	top: 13px;
+}
+
+.burger-line__third {
+	bottom: 0;
+}
+
+/* Header styles end */
+
+
+
+/* Intro styles start */
+
+.intro {
+	min-height: 100vh;
+	background: url(../img/jpg/Hero.jpg) no-repeat center;
+	background-size: cover;
+	padding-top: 263px;
+	color: #FFF;
+	padding-bottom: 216px;
+}
+
+.intro__title {
+	max-width: 619px;
+	
+	font-size: 50px;
+	font-family: Lato;
+	font-weight: 500;
+	line-height: 60px;
+	margin-bottom: 22px;
+}
+
+.intro__subtitle {
+	color: #FFF;
+	font-size: 16px;
+	font-family: Lato;
+	line-height: 24px;
+	max-width: 546px;
+	margin-bottom: 60px;
+}
+
+.form__info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.form__text {
+	width: 297px;
+	background: transparent url(../img/svg/Oval.svg) no-repeat left 8px;
+	border: 0;
+	padding: 0 0 22px 43px;
+	border-bottom: 2px solid #FFF;
+	color: #FFF;
+	font-size: 18px;
+	font-family: Lato;
+	font-weight: 500;
+	line-height: 24px;
+	margin-right: 60px;
+}
+
+.form__text::placeholder {
+	color: #FFF;
+	font-size: 18px;
+	font-family: Lato;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.form__button {
+	padding: 15px 40px;
+	text-transform: uppercase;
+	background: #1B7DFF;
+	color: #FFF;
+	font-size: 24px;
+	font-family: Lato;
+	font-weight: 500;
+	border: 0;
+	transition: 0.2s all;
+}
+
+.form__button:hover, .form__button:active, .form__button:focus {
+	background: #2269c7;
+}
+
+/* Intro styles end */
+
+
+
+/* Benefits styles start */
+
+.benefits {
+	margin-bottom: 130px;
+}
+
+.benefits__wrapper {
+	position: relative;
+	max-width: 1262px;
+	margin: 0 auto;
+	background: #FFF;
+	box-shadow: 0px 2px 20px 0px rgba(21, 24, 36, 0.16);
+}
+
+.benefits__title {
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-100%);
+	color: #102746;
+	font-size: 35px;
+	font-weight: 500;
+	padding: 93px 100px 88px 100px;
+}
+
+.benefits__cards {
+	font-family: Lato;
+	line-height: 24px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 55px;
+	padding: 0 100px;
+}
+
+.benefits__card {
+	grid-column: span 1;
+	margin: 32px 0 112px 0;
+	display: flex;
+   flex-direction: column;
+}
+
+.benefits__card-icon {
+	margin-bottom: 37px;
+	max-width: 66px;
+}
+
+.benefits__card-icon-img {
+	display: block;
+}
+
+.benefits__card-title {
+	color: #000;
+	font-size: 18px;
+	margin-bottom: 26px;
+}
+
+.benefits__card-info {
+	color: #000;
+	margin-bottom: 39px;
+}
+
+.benefits__card-button {
+	color: #006DFE;
+	font-size: 16px;
+	font-family: Lato;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-right: 60px;
+	background: transparent url(../img/svg/arrow-ico.svg) no-repeat 95% center;
+	transition: 0.2s all;
+	margin: auto 0 0 0;
+	max-width: 180px;
+}
+
+.benefits__card-button:hover, .benefits__card-button:focus {
+	color: #1f49bf;
+	background: transparent url(../img/svg/arrow-ico.svg) no-repeat right center;
+}
+/* Benefits styles end */
+
+
+
+/* Get-inspired styles start */
+
+.get-inspired {
+	margin-bottom: 130px;
+}
+
+.get-inspired__title-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 35px;
+}
+
+.get-inspired__cards {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 10px;
+}
+
+.get-inspired__card {
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0px 2px 20px 0px rgba(21, 24, 36, 0.16);
+}
+
+.get-inspired__card:hover .get-inspired__card-pic {
+	transform: scale(1.05);
+}
+
+.get-inspired__card::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(21, 24, 36, 0.40);
+	z-index: 2;
+}
+
+.get-inspired__card_large {
+	grid-column: span 3;
+}
+
+.get-inspired__card_small {
+	grid-column: span 2;
+}
+
+.get-inspired__card-pic {
+	width: 100%;
+	object-fit: cover;
+	transition: 0.2s all;
+}
+
+.get-inspired__card-pic_large {
+	height: 354px;
+}
+
+.get-inspired__card-pic_small {
+	height: 283px;
+}
+
+.get-inspired__card-title {
+	color: #FFF;
+	font-size: 50px;
+	font-family: Lato;
+	font-weight: 700;
+	position: absolute;
+	bottom: 27px;
+	left: 29px;
+	z-index: 3;
+}
+
+.get-inspired__card-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 4;
+}
+
+/* Get-inspired styles end */
+
+
+
+/* Tours styles start */
+
+.tours {
+	margin-bottom: 140px;
+}
+
+.tours__wrap {
+	max-width: 1262px;
+	margin: 0 auto;
+	
+}
+
+.tours__item {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 70px;
+	margin-bottom: 85px;
+	align-items: center;
+}
+
+.tours__item-info-wrap {
+	padding-left: 45px;
+}
+
+.tours__item-info-title {
+	color: #102746;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 40px;
+	margin-bottom: 85px;
+}
+
+.tours__item-info-text {
+	color: #102746;
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 58px;
+}
+
+/* Tours styles end */
+
+
+
+/* Places styles start */
+
+.places {
+	margin-bottom: 144px;
+}
+
+.places-title {
+	margin-bottom: 54px;
+}
+
+.places__cards {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 58px;
+}
+
+.places__card {
+	display: flex;
+	flex-direction: column;
+	grid-column: span 2;
+}
+
+.places__card-pic-wrap:hover .places__card-pic {
+	transform: scale(1.05);
+}
+
+.places__card-pic {
+	transition: 0.2s all;
+}
+
+.places__card-pic-wrap {
+	max-width: 386px;
+	margin-bottom: 45px;
+	position: relative;
+	overflow: hidden;
+}
+
+.places__card-stats {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 16px 25px;
+	background: rgba(21, 24, 36, 0.60);
+}
+
+.places__card-title {
+	color: #FFF;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 24px;
+	margin: 0 auto 0 0;
+}
+
+.places__card-likes-value {
+	color: #FFF;
+	font-size: 16px;
+	font-family: Lato;
+	font-weight: 500;
+	line-height: 24px;
+	padding-right: 20px;
+	margin-right: 14px;
+	background: url(../img/svg/like-ico.svg) no-repeat right 4px;
+}
+
+.places__card-comments-value {
+	color: #FFF;
+	font-size: 16px;
+	font-family: Lato;
+	font-weight: 500;
+	line-height: 24px;
+	padding-right: 23px;
+	background: url(../img/svg/comment-ico.svg) no-repeat right 4px;
+}
+
+.places__card-info {
+	color: #102746;
+	font-size: 16px;
+	font-family: Lato;
+	line-height: 24px;
+	margin-bottom: 30px;
+}
+
+.places__card-button {
+	width: 118px;
+	padding: 12px 20px;
+	background: #006DFE;
+	text-decoration: none;
+	color: #FFF;
+	font-size: 16px;
+	font-family: Lato;
+	transition: 0.2s all;
+	margin: auto 0 0 0;
+}
+
+.places__card-button:hover, .places__card-button:active, .places__card-button:focus {
+	background: #3e89ed;
+}
+
+/* Places styles end */
+
+
+
+/* Video styles start */
+
+.video {
+	width: 100%;
+}
+
+.video-wrapper {
+	position: relative;
+	max-width: 1262px;
+	margin: 0 auto;
+}
+
+.video-item {
+	padding-top: 56.25%;
+}
+
+.video-link {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Video styles end */
+
+
+
+
+/* Footer styles start */
+
+.footer {
+	background: #0E1D28;
+	padding: 119px 0;
+}
+
+.footer-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1060px;
+	margin: 0 auto;
+}
+
+.footer-logo {
+	width: 50%;
+}
+
+.footer-info {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footer-title {
+	color: #FFF;
+	font-size: 18px;
+	font-family: Lato;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.footer-link {
+	color: #FFF;
+	font-size: 16px;
+	font-family: Lato;
+	line-height: 24px;
+	text-decoration: none;
+}
+
+/* Footer styles end */
+
+
+
+/* Media start */
+
+@media screen and (max-width: 960px) {
+
+	.form__text {
+		margin-bottom: 30px;
+	}
+
+	.form__button {
+		margin-bottom: 30px;;
+	}
+
+	.benefits__cards {
+		padding: 0 10px;
+	}
+
+	.benefits__cards {
+		gap: 30px;
+	}
+
+	.places__cards {
+		gap: 40px 20px;
+	}
+
+	.places__card-pic-wrap {
+		margin-bottom: 25px;
+	}
+
+	.places__card-info {
+		margin-bottom: 15px;
+	}
+	.places__card {
+		grid-column: span 3;
+	}
+
+	.benefits__title {
+		padding: 40px 20px;
+	}
+
+	.tours__item {
+		gap: 40px;
+	}
+
+	.tours__item-info-wrap {
+		padding: 0;
+	}
+
+	.tours__item-info-title {
+		margin-bottom: 25px;
+	}
+
+	.tours__item-info-text {
+		margin-bottom: 20px;
+	}
+
+	.get-inspired__card_large {
+		grid-column: span 6;
+	}
+
+	.get-inspired__card_small {
+		grid-column: span 6;
+	}
+
+	.get-inspired__card-pic_large {
+		height: 283px;
+  }
+
+  .footer {
+	padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+	.header__burger {
+		display: block;
+	}
+
+	.header__nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #0E1D28;
+		padding: 60px;
+		z-index: 20;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		transform: translateX(100%);
+		transition: .2s all ease;
+	}
+
+	.header__nav__list {
+		padding-top: 100px;
+	}
+
+	.header__nav_active {
+		transform: translateX(0);
+	}
+
+	.header__nav__cross {
+		position: relative;
+		width: 40px;
+		height: 40px;
+	}
+
+	.header__nav__cross-line {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		display: block;
+		height: 2px;
+		width: 100%;
+		background: #fff;
+	}
+
+	.header__nav__cross-line:first-child {
+		transform: rotate(45deg);
+	}
+
+	.header__nav__cross-line:last-child {
+		transform: rotate(-45deg);
+	}
+
+	.header__nav__list {
+		display: block;
+	}
+
+	.header__nav__item {
+		width: 100%;
+		margin: 0 0 40px 0;
+	}
+
+	.header__nav__link {
+		font-size: 50px;
+	}
+
+	.wrapper {
+		max-width: 1060px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	
+	.wrapper-large {
+		max-width: 1262px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	.benefits__cards {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+	.form__text {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.form__button {
+		width: 100%;
+	}
+
+	.intro {
+		padding: 145px 0;
+	}
+
+	.header__wrapper {
+		padding-top: 30px;
+	}
+
+	.benefits__card {
+		margin: 0 0 40px 0;
+	}
+
+	.benefits__card-info {
+		margin-bottom: 20px;
+	}
+
+	.benefits {
+		margin-bottom: 76px;
+	}
+
+	.section-title {
+		margin-bottom: 20px;
+	}
+
+	.tours {
+		margin-bottom: 76px;
+	}
+
+	.tours__item {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.tours__item-pic-img_reverse {
+		grid-row-start: -1;
+	}
+
+	.tours__item {
+		gap: 15px;
+	}
+
+	.tours__item-info-title {
+		margin-bottom: 15px;
+	}
+
+	.tours__item-info-text {
+		margin-bottom: 10px;
+	}
+
+	.tours__item {
+		margin-bottom: 55px;
+	}
+
+	.places__card {
+		grid-column: span 6;
+  }
+
+  .places__cards {
+	gap: 50px 20px;
+	}
+
+	.places__card-button {
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer-logo {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.footer-info {
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	.footer-info-item {
+		margin-bottom: 20px;
+	}
+
+	.footer-info-item:first-child {
+		width: 50%;
+	}
+
+	.footer-info-item:last-child {
+		width: 100%;
+	}
+
+}
+
+/* Media end */
